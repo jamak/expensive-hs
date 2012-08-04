@@ -1,0 +1,2 @@
+<h1> #{transactionTitle transaction}
+<transaction> #{transactionContent transaction}

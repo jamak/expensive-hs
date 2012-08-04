@@ -1,0 +1,24 @@
+Default: &defaults
+  user: yosog
+  password: yosog
+  host: localhost
+  port: 27017
+  database: yosog
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: yosog_test
+  <<: *defaults
+
+Staging:
+  database: yosog_staging
+  poolsize: 100
+  <<: *defaults
+
+Production:
+  database: yosog_production
+  poolsize: 100
+  <<: *defaults

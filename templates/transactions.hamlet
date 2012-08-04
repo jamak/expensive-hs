@@ -1,0 +1,15 @@
+<h1> Transactions
+$if null transactions
+    -- Show a standard message if there is no transaction
+    <p> There are no transactions in the blog
+$else
+    -- Show the list of transactions
+    <ul>
+        $forall Entity transactionId transaction <- transactions
+            <li> 
+                <a href=@{TransactionR transactionId} > #{transactionTitle transaction}
+<hr>
+  <form method=post enctype=#{enctype}>
+    ^{transactionWidget}
+    <div>
+        <input type=submit value="Post New Transaction">

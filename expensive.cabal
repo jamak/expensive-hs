@@ -1,4 +1,4 @@
-name:              yosog
+name:              expensive
 version:           0.0.0
 license:           BSD3
 license-file:      LICENSE
@@ -10,7 +10,7 @@ category:          Web
 stability:         Experimental
 cabal-version:     >= 1.8
 build-type:        Simple
-homepage:          http://yosog.yesodweb.com/
+homepage:          http://expensive.yesodweb.com/
 
 Flag dev
     Description:   Turn on development settings, like auto-reload templates.
@@ -79,14 +79,14 @@ library
                  , directory                     >= 1.1        && < 1.2
                  , warp                          >= 1.2        && < 1.3
 
-executable         yosog
+executable         expensive
     if flag(library-only)
         Buildable: False
 
     main-is:           ../main.hs
     hs-source-dirs:    dist
     build-depends:     base
-                     , yosog
+                     , expensive
                      , yesod-default
 
 test-suite test
@@ -107,7 +107,7 @@ test-suite test
                        FlexibleContexts
 
     build-depends: base
-                 , yosog
+                 , expensive
                  , yesod-test
                  , yesod-default
                  , yesod-core
